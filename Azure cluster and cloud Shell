@@ -1,0 +1,19 @@
+Step 1: Create AKS Cluster on Azure portal
+Step 2: Connect to Azure AKS Cluster throught Azure Cloud Shell
+       # Command
+           az aks get-credentials --resource-group <Resource-Group-Name> --name <Cluster-Name>
+    # Replace Resource Group & Cluster Name
+    # example: az aks get-credentials --resource-group aks-rg1 --name aksdemo1
+    # List Kubernetes Worker Nodes
+             kubectl get nodes 
+             kubectl get nodes -o wide
+Step 3: Explore Azure AKS Cluster Resources
+    # List Namespaces
+         kubectl get namespaces
+         kubectl get ns           ns is the alias for namespace 
+    # List Pods from all namespaces
+         kubectl get pods --all-namespaces
+   # List all k8s objects from Cluster Control plane
+        kubectl get all --all-namespaces
+Step 4: Install Azure CLI and Connect to Azure AKS Cluster with Azure CLI on local desktop
+Step 5: Deploy Sample Application on AKS Cluster and test
